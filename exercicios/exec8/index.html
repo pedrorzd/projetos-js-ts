@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="formulario">
+        <h1>Bem vindo, faça seu cadastro</h1>
+        
+        <form id="form" action="">
+            <p id="name-input" class="spaces">
+                <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome">
+            </p>
+            <p id="second-name-input" class="spaces">
+                <label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="isobrenome">
+            </p>
+            <p id="weight-input" class="spaces">
+                <label for="iweight">Peso:</label>
+                    <input type="text" name="weight" id="iweight">
+            </p>
+            <p id="heigth-input" class="spaces">
+                <label for="iheight">Altura:</label>
+                    <input type="text" name="height" id="iheight">
+            </p>
+            <p class="button">
+                <input id="button" type="submit" value="Enviar">
+            </p>
+
+        </form>
+    </div>
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
