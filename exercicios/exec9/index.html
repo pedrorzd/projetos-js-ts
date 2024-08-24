@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="formulario">
+        <h1>Índice de Massa Corporal</h1>
+        
+        <form id="form" action="">
+
+            <header>
+                <p id="imc-categoria">
+                    
+                    <ul id="lista-categoria">
+                        <li><strong><p>IMC</p></strong></li>
+                        <li>Menos do que 18,5</li>
+                        <li>Entre 18,5 e 24,9</li>
+                        <li>Entre 25 e 29,9</li>
+                        <li>Entre 30 e 34,9</li>
+                        <li>Entre 35 e 39,9</li>
+                        <li>Mais do que 40</li>
+                    </ul>
+                </p>
+
+                <p id="imc-resultado">
+                    <ul id="lista-resultado">
+                        <li><strong><p>Resultado</p></strong></li>
+                        <li>Abaixo do peso</li>
+                        <li>Peso normal</li>
+                        <li>Sobrepeso</li>
+                        <li>Obesidade grau 1</li>
+                        <li>Obesidade grau 2</li>
+                        <li>Obesidade grau 3</li>
+                    </ul>
+                </p>
+            </header>
+
+            <div id="titulo-inputs">Calcule seu IMC</div>
+
+            <p id="weight-input" class="spaces">
+                <label for="iweight">Peso:</label>
+                    <input type="text" name="weight" id="iweight">
+            </p>
+            <p id="heigth-input" class="spaces">
+                <label for="iheight">Altura:</label>
+                    <input type="text" name="height" id="iheight">
+            </p>
+            <p class="button">
+                <input id="button" type="submit" value="Enviar">
+            </p>
+
+            <div id="resultado"></div>
+        </form>
+    </div>
+    
+
+    <script src="./assets/js/script"></script>
+</body>
+</html>
