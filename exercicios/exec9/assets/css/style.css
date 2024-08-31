@@ -95,3 +95,13 @@ input{
     text-align: center;
     background-color:rgba(0,212,255,1);
 }
+
+.good-result{
+    background-color: aqua;
+    padding: 8px 10px;
+}
+
+.bad-result{
+    background-color: rgb(255, 96, 146);
+    padding: 10px 20px;
+}
