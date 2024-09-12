@@ -6,7 +6,7 @@ function getDate(date) {
   const hour = date.getHours();
   const minute = date.getMinutes();
 
-  return `${weekDay} ${day} ${month} ${year} ${hour}:${minute}`;
+  return `${weekDay} ${day} ${month} ${year} <br> ${hour}:${minute}`;
 }
 function setWeekDay(weekDay) {
   switch (weekDay) {
@@ -58,16 +58,10 @@ function criateParagraf() {
   const p = document.createElement("p");
   return p;
 }
-function setResult(atualDate) {
-  const resultado = document.querySelector("#date-result");
-  resultado.innerHTML = " ";
-
-  const p = criateParagraf();
-  p.classList.add(".date-result");
-
-  p.innerHTML = atualDate;
-  resultado.appendChild(p);
-}
 
 const today = new Date();
 const atualDate = getDate(today);
+
+const resultado = document.querySelector("#date-result");
+resultado.innerHTML = " ";
+resultado.innerHTML = atualDate;
