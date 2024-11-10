@@ -11,10 +11,11 @@ function limpaInput() {
   inputTarefa.value = "";
 }
 
-function createButton(li) {
+function createDeleteButton(li) {
   li.innerText += " ";
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "Excluir";
+  deleteButton.setAttribute('class','deleteButton')
   li.appendChild(deleteButton);
 }
 
@@ -23,7 +24,22 @@ function criaTarefa(textoInput) {
   li.innerHTML = textoInput;
   listaTarefas.appendChild(li);
   limpaInput();
-  createButton(li);
+  createDeleteButton(li);
+  salvarTarefa();
+}
+
+function salvarTarefa(){
+  const liTarefa = listaTarefas.querySelectorAll('li')
+  const listaDeTarefas = [];
+
+  for(let tarefa of liTarefa){
+    let tarefaTexto = tarefa.innerText;
+    tarefaTexto = tarefaTexto.replace('Excluir', '').trim();
+    listaDeTarefas.push(tarefaTexto);
+  }
+
+  const tarefasJSON = JSON.stringify(listaDeTarefas);
+  localStorage.setItem('tarefasJSON', tarefasJSON);
 }
 
 buttonAddTarefa.addEventListener("click", function () {
@@ -37,3 +53,13 @@ inputTarefa.addEventListener("keypress", function (e) {
     criaTarefa(inputTarefa.value);
   }
 });
+
+document.addEventListener("click", function (e) {
+  const element = e.target;
+  
+  if (element.classList.contains('deleteButton')){
+    element.parentElement.remove();
+    salvarTarefa();
+  }
+});
+ 
